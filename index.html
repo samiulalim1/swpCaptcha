@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SWP-Captcha</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+	
+		body {
+			background: #f1f1f1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			flex-direction: column;
+			font-family: "National Park", sans-serif;
+		}
+		
+		#submit {
+			background-color: #008000;
+			color: white;
+			border: none;
+			margin: 1em;
+			padding: 12px 28px;
+			font-size: 16px;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background-color 0.3s, transform 0.2s;
+			box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+			font-weight: 600;
+		}
+
+		#submit:hover {
+			background-color: #006400;
+			transform: scale(1.03);
+		}
+
+		#submit:active {
+			background-color: #004d00;
+			transform: scale(0.97);
+		}
+	</style>
+	<meta name="description" content="SWP-Captcha - I Stand with Palestine CAPTCHA">
+	<link rel="stylesheet" href="https://samiulalim1.github.io/swpCaptcha/swpCaptcha.css">
+	<link rel="shortcut icon" href="https://samiulalim1.github.io/swpCaptcha/images/icon.png">
+	<meta property="og:image" content="https://samiulalim1.github.io/swpCaptcha/images/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+	<h3>Verify that you're human</h3>
+	<div id="swpCaptcha">
+		<div class="swpCaptchaContainer">
+			<div class="swpLeftSection" id="swpCaptchaTrigger">
+				<div class="swpCheckBox" id="swpCheckBox"></div>
+				<div class="swpCaptchaLabel">I stand with Palestine</div>
+			</div>
+			<div class="swpRightSection">
+				<img class="swpCaptchaImage" src="https://samiulalim1.github.io/swpCaptcha/images/icon.png" alt="logo">
+				<div class="swpCaptchaTitle">SWP-Captcha</div>
+				<div class="swpCaptchaTerms"><a href="https://samiulalim1.github.io/swpCaptcha/privacy.html" target="_blank">Privacy</a> - <a href="https://samiulalim1.github.io/swpCaptcha/terms.html" target="_blank">Terms</a></div>
+			</div>
+		</div>
+
+		<div class="swpPopup" id="swpPopup">
+			<div class="swpPopupContent">
+				<h3>Select all images that represent Palestine</h3>
+				<div class="swpGrid" id="swpGridContainer"></div>
+				<div class="swpPopupButtons">
+					<button id="swpSubmitCaptcha">Verify</button>
+				</div>
+				<div class="swpError" id="errorMsg">Incorrect selection. Please try again.</div>
+			</div>
+		</div>
+	</div>
+	<button id="submit">Continue</button>
+	<script src="https://samiulalim1.github.io/swpCaptcha/swpCaptcha.js"></script>
+	<script>
+		document.getElementById("submit").addEventListener("click", () => {
+			let isSwpCaptchaSolved = swpCaptchaSolved();
+			if(isSwpCaptchaSolved){
+				window.location.href = "https://samiulalim1.github.io/swpCaptcha/about.html";
+			}else{
+				alert('First, verify that you are human.');
+			}
+		});
+	</script>
+</body>
+</html>

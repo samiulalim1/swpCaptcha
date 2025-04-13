@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+#swpCaptcha * {
+	font-family: "Winky Rough", sans-serif;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#swpCaptcha {
+    width: 95%;
+    min-width: 300px;
+    max-width: 330px;
+}
+
+#swpCaptcha .swpCaptchaContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #d3d3d3;
+	border-radius: 4px;
+	padding: 10px 14px;
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+#swpCaptcha .swpLeftSection {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex: 1;
+}
+
+#swpCaptcha .swpRightSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#swpCaptcha .swpCheckBox {
+	width: 28px;
+	height: 28px;
+	border: 2px solid #999;
+	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+}
+
+#swpCaptcha .swpCheckBox.checked::after {
+	content: '✔';
+	font-size: 23px;
+	color: green;
+	position: absolute;
+	top: -4px;
+	left: 5px;
+}
+
+#swpCaptcha .swpLoading {
+	border: 2px solid transparent;
+}
+
+#swpCaptcha .swpCheckBox.swpLoading::after {
+	content: '';
+	width: 22px;
+	height: 22px;
+	border: 3px solid #ccc;
+	border-top: 3px solid #008000;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: swpSpin 1s linear infinite;
+}
+
+@keyframes swpSpin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#swpCaptcha .swpCaptchaLabel {
+	font-size: 16px;
+	color: #000;
+	font-weight: 500;
+}
+
+#swpCaptcha .swpCaptchaImage {
+	width: 35px;
+	height: 35px;
+	margin-bottom: 4px;
+}
+
+#swpCaptcha .swpCaptchaTitle {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#swpCaptcha .swpCaptchaTerms {
+	font-size: 10px;
+	color: #999;
+}
+
+#swpCaptcha .swpCaptchaTerms a {
+	text-decoration: none;
+	color: #999;
+	cursor: pointer;
+}
+
+#swpCaptcha .swpCaptchaTerms a:hover {
+	color: #03A9F4;
+}
+
+
+#swpCaptcha .swpPopup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+#swpCaptcha .swpPopupContent {
+	background: #fff;
+	padding: 20px;
+	border-radius: 6px;
+	width: 360px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#swpCaptcha .swpPopupContent h3 {
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: #222;
+}
+
+#swpCaptcha .swpGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 8px;
+}
+
+#swpCaptcha .swpGrid img {
+	width: 100%;
+	height: 80px;
+	object-fit: cover;
+	cursor: pointer;
+	border: 3px solid transparent;
+	border-radius: 5px;
+	transition: border-color 0.2s;
+}
+
+#swpCaptcha .swpGrid img.selected {
+	border-color: #4285f4;
+}
+
+#swpCaptcha .swpPopupButtons {
+	margin-top: 12px;
+	text-align: right;
+}
+
+#swpCaptcha .swpPopupButtons button {
+	background-color: #4285f4;
+	color: #fff;
+	border: none;
+	padding: 6px 14px;
+	border-radius: 3px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+#swpCaptcha .swpPopupButtons button:hover {
+	background-color: #3367d6;
+}
+
+#swpCaptcha .swpError {
+	color: red;
+	margin-top: -22px;
+	display: none;
+	font-size: 13px;
+}
