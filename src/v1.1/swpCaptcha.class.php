@@ -49,4 +49,3 @@ class swpCaptchaClass{
 		return false;
 	}
 }
-?>
