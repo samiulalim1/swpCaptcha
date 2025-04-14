@@ -64,7 +64,7 @@ let captchaToken = swpCaptcha.getCaptchaToken(300); // Returns token or null
 ```
 
 
-### 1. PHP (Backend)
+### 2. PHP (Backend)
 
 #### 📥 Download the PHP Class
 
@@ -96,5 +96,5 @@ $verify = $swpCaptcha->verifyToken('THE_TOKEN_FROM_JS');
 ## 🕊️ Free Palestine 🇵🇸
 
 This project is more than just code.  
-It’s a small digital protest for **freedom**, **human rights**, and **dignity** for the people of **Palestine**.
+It’s a small digital protest for **freedom**, **human rights**, and **dignity** for the people of **Palestine**.  
 Stand with truth. Stand with humanity. **Stand with Palestine.**
