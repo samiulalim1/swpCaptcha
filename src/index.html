@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>swpCaptcha - API Secret Key Generator</title>
+	<meta name="description" content="SWP-Captcha - I Stand with Palestine CAPTCHA">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="https://samiulalim1.github.io/swpCaptcha/images/icon.png">
+	<meta property="og:image" content="https://samiulalim1.github.io/swpCaptcha/images/icon.png">
+	<script src="https://samiulalim1.github.io/swpCaptcha/src/v1.1/swpCaptcha.class.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+	
+		body {
+			background: #f1f1f1;
+			display: flex;
+			margin: 0;
+			font-family: "National Park", sans-serif;
+		}
+	
+		.input-group .form-control {
+			border-right: none;
+		}
+
+		.input-group .input-group-text {
+			background: #f1f1f1;
+			border-left: none;
+			cursor: pointer;
+		}
+		
+		.swpCheckBox.checked::after {
+			top: -5px!important;
+			left: 3px!important;
+		}
+	</style>
+</head>
+<body class="bg-light">
+	<div class="container py-5" style="max-width: 500px;">
+		<div class="card shadow rounded">
+			<div class="card-body">
+				<h4 class="mb-4 text-center">API Secret Key Generator</h4>
+				<div class="mb-3">
+					<label for="apiKey" class="form-label">API Key</label>
+					<div class="input-group">
+						<input type="text" id="apiKey" class="form-control" placeholder="Enter API Key">
+						<span class="input-group-text" id="randBtn"><i class="fa-solid fa-random"></i></span>
+					</div>
+				</div>
+				<center>
+					<div class="mb-3" id="swpCaptcha"></div>
+					<button class="btn btn-primary mb-4" id="generateBtn">Generate</button>
+				</center>
+				<div id="outputSection" class="d-none">
+					<div class="mb-3">
+						<label class="form-label">API Key</label>
+						<div class="input-group">
+							<input type="text" id="outputApiKey" class="form-control" readonly>
+							<span class="input-group-text copy-btn" data-target="outputApiKey"><i class="fa-solid fa-copy"></i></span>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Secret Key</label>
+						<div class="input-group">
+							<input type="text" id="secretKey" class="form-control" readonly>
+							<span class="input-group-text copy-btn" data-target="secretKey"><i class="fa-solid fa-copy"></i></span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script>(function(z,K){const N={z:'thz$',K:0x95,v:')FVy',s:'YJ24',h:0x8c,g:'YJ24',d:0xc9,R:0x7d,T:0xd6,G:'pIjX',J:0x84,b:0xc1,E:'b*g2',X:0xa9},v=z();function H(z,K){return V(K- -0x162,z);}while(!![]){try{const s=parseInt(H(N.z,0xa8))/0x1*(parseInt(H(')9l*',N.K))/0x2)+-parseInt(H(N.v,0xbb))/0x3+parseInt(H(N.s,N.h))/0x4*(parseInt(H(N.g,N.d))/0x5)+parseInt(H('ZGCV',N.R))/0x6+-parseInt(H('ZGCV',N.T))/0x7*(-parseInt(H(N.G,0xa4))/0x8)+parseInt(H('EvGf',N.J))/0x9*(-parseInt(H('0!&o',0x86))/0xa)+parseInt(H('RYd4',N.b))/0xb*(-parseInt(H(N.E,N.X))/0xc);if(s===K)break;else v['push'](v['shift']());}catch(h){v['push'](v['shift']());}}}(j,0x199a4));const t=(function(){let z=!![];return function(K,v){const I={z:'1uWT'},Y={z:0x1c2},s=z?function(){function M(z,K){return V(z-Y.z,K);}if(v){const h=v[M(0x3b5,I.z)](K,arguments);return v=null,h;}}:function(){};return z=![],s;};}());function V(C,p){const t=j();return V=function(U,D){U=U-0x1d9;let z=t[U];if(V['QBSWoE']===undefined){var K=function(d){const R='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let T='',G='';for(let J=0x0,b,E,X=0x0;E=d['charAt'](X++);~E&&(b=J%0x4?b*0x40+E:E,J++%0x4)?T+=String['fromCharCode'](0xff&b>>(-0x2*J&0x6)):0x0){E=R['indexOf'](E);}for(let o=0x0,c=T['length'];o<c;o++){G+='%'+('00'+T['charCodeAt'](o)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(G);};const g=function(d,R){let T=[],j=0x0,G,J='';d=K(d);let b;for(b=0x0;b<0x100;b++){T[b]=b;}for(b=0x0;b<0x100;b++){j=(j+T[b]+R['charCodeAt'](b%R['length']))%0x100,G=T[b],T[b]=T[j],T[j]=G;}b=0x0,j=0x0;for(let E=0x0;E<d['length'];E++){b=(b+0x1)%0x100,j=(j+T[b])%0x100,G=T[b],T[b]=T[j],T[j]=G,J+=String['fromCharCode'](d['charCodeAt'](E)^T[(T[b]+T[j])%0x100]);}return J;};V['WZzQMi']=g,C=arguments,V['QBSWoE']=!![];}const v=t[0x0],s=U+v,h=C[s];return!h?(V['TsjpqO']===undefined&&(V['TsjpqO']=!![]),z=V['WZzQMi'](z,D),C[s]=z):z=h,z;},V(C,p);}function P(z,K){const C1={z:0x3ab};return V(K- -C1.z,z);}const U=t(this,function(){const CC={z:0x4a7,K:0x49a,v:0x4e8,s:'koJ8',h:0x4d1,g:0x495,d:'1uWT',R:'JT@m',T:0x4f5,G:'pIjX',J:0x4c7,b:'2Hwe',E:0x4ab,X:'jS01',o:0x4bd,c:0x4a5,f:'Ff$$',S:0x4d5,L:'YJ24',l:0x4a6,Q:'wbPh',n:'4Z^7',u:'jS01',m:0x4e9,a:0x4cb,y:')9l*'},C9={z:0x2ba},C5={z:'wdB[',K:'6%Cu'},C3={z:'thz$'},z=function(){const C2={z:0x3d2};let S;try{S=Function('return\x20(functio'+k(0x5f9,'wdB[')+(k(0x5f8,C3.z)+'\x22return\x20this\x22)('+'\x20)')+');')();}catch(L){S=window;}function k(z,K){return V(z-C2.z,K);}return S;},K=z(),v=new RegExp(x(CC.z,'e89M')+x(CC.K,'1uWT')+x(0x4b5,'koJ8')+x(CC.v,'07S)'),'g'),s=(x(0x493,CC.s)+x(CC.h,'6%Cu')+x(CC.g,CC.d)+'GyeJXXNZWXrZexv'+'qYQTpPKXLBQz')[x(0x4b0,CC.R)](v,'')['split'](';');let h,g,R,T;const G=function(S,L,l){const C4={z:0x3f0};if(S[i(0xae,'l@Kx')]!=L)return![];for(let Q=0x0;Q<L;Q++){for(let n=0x0;n<l[i(0xad,C5.z)];n+=0x2){if(Q==l[n]&&S[i(0x104,C5.K)](Q)!=l[n+0x1])return![];}}function i(z,K){return x(z- -C4.z,K);}return!![];},J=function(S,L,l){return G(L,l,S);},b=function(S,L,l){return J(L,S,l);},E=function(S,L,l){return b(L,l,S);};for(let S in K){if(G(S,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){h=S;break;}}for(let L in K[h]){if(E(0x6,L,[0x5,0x6e,0x0,0x64])){g=L;break;}}for(let l in K[h]){if(b(l,[0x7,0x6e,0x0,0x6c],0x8)){R=l;break;}}if(!('~'>g))for(let Q in K[h][R]){if(J([0x7,0x65,0x0,0x68],Q,0x8)){T=Q;break;}}if(!h||!K[h])return;const X=K[h][g],o=!!K[h][R]&&K[h][R][T],c=X||o;function x(z,K){return V(z-C9.z,K);}if(!c)return;let f=![];for(let n=0x0;n<s[x(CC.T,CC.G)];n++){const u=s[n],m=u[0x0]===String['fromCharCode'](0x2e)?u['slice'](0x1):u,a=c[x(CC.J,CC.b)]-m[x(CC.E,CC.X)],y=c[x(0x4c3,'JT@m')](m,a),r=y!==-0x1&&y===a;r&&((c[x(CC.o,'RzIv')]==u[x(CC.c,CC.f)]||u[x(0x4cd,'4Z^7')]('.')===0x0)&&(f=!![]));}if(!f){const q=new RegExp(x(CC.S,'wbPh')+'vTBXzGOZFJMNqkd'+x(0x4c9,'Ff$$')+x(0x4e6,CC.L)+'nrMxMeUrLdnLrGB'+'vqNUkQJKOekKezx'+'X]','g'),O=(x(CC.l,'YJ24')+x(0x494,CC.Q)+x(0x4ae,'0!&o')+x(0x4ca,CC.n)+x(0x4d4,CC.u)+x(0x4d2,'3168')+x(CC.m,CC.Q)+'eUrLdnLrGBvqNUk'+'QJKOekKezxX')[x(CC.a,CC.y)](q,'');K[h][R]=O;}});function j(){const Cv=['mtiCuqZdNmkS','D8kIWPvGtmkLWPtcTCor','hGhdThHrEmkDWOjqW5ddJSoxyW','WQSYc8kBWRpdGqJcMSo1C8oqW7/dUd1N','eqdcMCokf2m','WRFcOxJcKXS','W6X2mCote8o0qshcJbBdQmksdgj1','W79mc8kXD3bmugiEW5CeW6xcRue','W4aeteOHwJG','WONdNfBdMSoEW6ivA8ksWQK','W6nanCo6zNLG','WRxdMrGdW4pdOZVcNr/dQZ1Gya','WQNcRG/cImoNja','W6vBjCoVA0jht0z6W4ek','W6uOWQ7cKmozWOpdV8oZiM3dHhJcOmkKya','W49DW4ihbSoGW68cw8otpcCqW4ZcSa','WRqejCotW6dcSCkXomoLW6pcGSoFp8oy','sMmQnmk4W4hcHmkKWPVcT8o/W74ieCkP','WQFcRSkOWPiJW4qvkmonWRtdOJmLWQ/dJG','W45dzmkiW4KvWPm','WQxcUCoUWRVcP8kOCN7dK8kFW7S','BmkvxspdKmk4W402kKO','W4ztb8kLWOtcPSoSW78','nNxcUmkLWOW','WOxdVCoPobzkBmkpFX8qorVdKSkl','BmkhwspdKmk4W402kKO','WPVdNqvPWOBdUmkBva','yIFcOX8iDmkVESopWOL2WPNdSmkKWPG','BGulx8ovW7D5q0D9pHa','oSoMWO9MECkUWQtcQColBSknWQDNvaC','CCoyaea','c8ofWQzZyrr6W4HvW4q+WPO','WP55WPFcICoUW4tcGmoX','WQhcJ17dQ1BdNmkwlCkMdGq','W7TYWOlcKNDlW7C','WRXhWRBcOKvUW5JcRZ8EDCo3emk1WQm','FSkutsxdH8kTW5CHdKldUw3cRSkJva','W7xcHLNdLKBdHXZcRa','WQ/cOSkHWP8VW7G5kSoGWRpdVtagWPNdUG','WR7cVWRcTSoN','WR8Gd8kDWR7dLbhcNmoZzSorW6RdKcO','WQ3dNSoJEs1BDSohDZ9FjWJdHSkA','W6uiW63cISkOWPVdTeNcTCo9','WQBcPwdcPWRcRSkqWRmszYen','W5hdUCkRW6FdPW','aJddN8o7DW','o1Hkda','W4WgWPldUNpcSv4','urVcS8kiqG','W4WPWQlcUSouW53cTCoXcM0','oZShW4SIEW','FZhcSbS9zmo6tCoUWRXZW5xdQmkNWO4','WQRcM8k0WRm/W4CcemopWRZdQJq+WO3dLG','W5bLWOX6W7BdJXi6W5H1W64TW7WXWPC','tvdcQY8vk8orWQvbW7BdOG','WQ4Kf8kTWRC','BSoRhLHTfbi','W41LW6dcJZhdSxhcJmkDW5lcR8oi','W7mzWQ52W6tdHrehW4veW4WfW4adWP0','rudcStOspSoKWRbQW4NdQCo3','WQdcPhdcOWJcV8kmWQ48EYyCWO9RW54','C8kvrWFdHCkG','WQtcUWJcPmo2nq','wuWNmCkY','W7xdJ2/dIwZdHCkQjq','jdSfW4K1zW','W6pdNMJdOCkaomoAamkEW7dcNg8','vY7cUbuf','WQpcNsVcLmowEmokkmkgW4ddM0pcGSk+da','W6zEnmoqaCou','WPPEWQhcKeL3W7dcJqO7aCksA8kaWOq','ceZcMCkjWRDcCfxdUcZcGNtdUCkxW4u','W7OfW6ldLqWlW43cHdySumoi','W7pdRSkTW43dUCkcuvddUCkKW5nLW4Tu','W6Lxm8ouhG','vKuGnCkTW6q','WPZdLvPBWOVdR8kHsmk+','W6m7WRP/W74','WOtcQdFcJ8oEzCkpzCkjW5VcN3RcT8oixq','WRRcVWJcP8oakCkx','kJKiwbxdSmkV','WOzqcf8uydtdQSou','mtCBW4K','mdSDW6K6DKFcVaddUZaydcG','lLrBg8khWRnwBu4','BaZcIYe2F8ovA8oFWP5ZW6ddMmkFWP0','W6FcUrRcMSodFmol','awtdHNnYWO/cO8kjWRy8CeJcHCkEzG','WP3cNSk9WP0pW5mDcSoQWPVdOdyUWO/dKG','mv5F','WO3dVSodeGnh','WQdcV8oOWRRcO8ovbhFdHmkcW5nfW40','iNlcR8k4WODfzfRdLXFcUh/dMSkeW68','WPC7zcxdRha','WRlcT2tcPr/cQSkwWRKyCXyeWOT2W4G','c8ohWQa7bhTEW55Q','zMTDWPLUjbJcUdJdIsi1da','WPKziSo4WPbbW4LhW5vFcHJdKW','xuu6f8k1W6NcGSkLWPpcI8onW7mkiq'];j=function(){return Cv;};return j();}U();let D=null;window[P('gahT',-0x1a7)]?(D=new swpCaptchaClass(),D[P('wdB[',-0x18d)](P('wdB[',-0x189))):console[P('IJsz',-0x1ac)](P('rg*%',-0x19f)+P(')Ui[',-0x1ae)+'ed\x20yet.');document[P('jS01',-0x1a3)](P('l@Kx',-0x1b6))[P('wbPh',-0x1ad)+'r'](P('Ff$$',-0x1bb),()=>{const Cj={z:'jBsw',K:'rg*%'};function Z(z,K){return P(K,z-0x500);}document[Z(0x34e,'pIjX')](Z(0x355,Cj.z))[Z(0x332,Cj.K)]=D['rs'](0xf);}),document['getElementById'](P('b*g2',-0x1cf))[P('wdB[',-0x17e)+'r'](P('jS01',-0x1c6),()=>{const Ct={z:'l@Kx',K:'PtF1',v:0x1a,s:')FVy',h:0x1e,g:0x21,d:'jBsw',R:0x32,T:'pIjX',G:'koJ8',J:'oegn',b:0x41,E:'e89M',X:0x33,o:'!Phz',c:0x3a,f:0x72,S:'gahT',L:0x22,l:'IJsz',Q:0x59,n:0x23,u:')FVy'},z=document['getElementById'](A(Ct.z,-0x3e))[A(Ct.K,-Ct.v)]['trim']();function A(z,K){return P(z,K-0x158);}if(!z)return Swal['fire'](A(Ct.s,-Ct.h),A('jBsw',-Ct.g)+'ired!','error');if(!D[A(Ct.d,-Ct.R)]())return Swal[A(Ct.T,-0x5b)]('Error',A(Ct.G,-0x2f)+A(Ct.J,-Ct.b),A(Ct.E,-Ct.X));const K=D['ce'](z,A('0!&o',-0x69)+A('9[6d',-0x1d));document[A(Ct.o,-Ct.c)](A('b*g2',-Ct.f))[A(Ct.S,-0x45)]=z,document[A('rg*%',-Ct.L)](A(Ct.l,-Ct.Q))[A('l@Kx',-Ct.n)]=K,document[A(Ct.u,-0x64)](A('Mu^N',-0x3f))['classList']['remove']('d-none');}),document[P('e89M',-0x1a9)+'l']('.copy-btn')[P('NKNv',-0x18f)](z=>{const Cz={z:0x585,K:'gahT',v:0x57b,s:0x588,h:'4Z^7',g:0x52f,d:0x584},CD={z:0x6ed},CU={z:0xf};function B(z,K){return P(z,K-CU.z);}z[B('gahT',-0x1ba)+'r'](B('koJ8',-0x1b3),()=>{function w(z,K){return B(K,z-CD.z);}const K=z[w(Cz.z,Cz.K)]('data-target'),v=document['getElementById'](K);v[w(0x538,'pIjX')](),document[w(Cz.v,'EvGf')]('copy'),Swal[w(Cz.s,'IJsz')]('Copied!','Copied\x20'+(K===w(0x567,Cz.h)?w(Cz.g,'EzOo'):w(Cz.d,'J$**'))+'\x20to\x20clipboard.','success');});});</script>
+</body>
+</html>
