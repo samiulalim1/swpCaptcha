@@ -27,7 +27,7 @@ Before you begin, generate your free **API key** and **Secret key** from here:
 #### 🧠 Include the JS in `<head>`
 
 ```html
-<script src="https://samiulalim1.github.io/swpCaptcha/src/v1.1/swpCaptcha.class.min.js"></script>
+<script src="https://samiulalim1.github.io/swpCaptcha/src/v1.2/swpCaptcha.class.min.js"></script>
 ```
 
 #### 📦 Add a Captcha Container in `<body>`
@@ -48,6 +48,16 @@ if(window.swpCaptchaClass){
 }else{
   console.log("swpCaptchaClass class not loaded yet.");
 }
+
+```
+
+#### ⚙️ Additional initialize options for v1.2
+
+```js
+// Set a timeout to re-solve the captcha after a certain period of time.
+swpCaptcha.setCaptchaTimeout(60); // Optional; 60 = 60 seconds
+// Auto-resolve or show an image selection channel
+swpCaptcha.setCaptchaAutosolver(false); // Optional; Default: true
 ```
 
 #### ⚙️ Check if Captcha is solved
