@@ -56,7 +56,7 @@ if(window.swpCaptchaClass){
 ```js
 // Set a timeout to re-solve the captcha after a certain period of time.
 swpCaptcha.setCaptchaTimeout(60); // Optional; 60 = 60 seconds
-// Auto-resolve or show an image selection channel
+// Automatically solve captchas or show image selection challenge
 swpCaptcha.setCaptchaAutosolver(false); // Optional; Default: true
 ```
 
